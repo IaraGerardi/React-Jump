@@ -1,37 +1,39 @@
 import React from 'react';
 import { useState } from "react";
-import { useEffect } from "react";
-import { PokeList} from './componentes/pokelist';
+// import { useEffect } from "react";
+import { PokeList } from './componentes/pokelist';
 import './pokeapi.css';
 
-export function App (){
-    // Traigo la url de la API y defino el estado
-    const [stateCant, setStateCant] = useState(4);
-    const [todos, setTodos ] = useState();
-    const url = (`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=${stateCant}`);
+export function App() {
+    // Defino un estado para ir cambiando la URL
+    const [stateOffset, setStateOffset] = useState(0);
+    const [todos, setTodos] = useState();
+    const url = (`https://pokeapi.co/api/v2/pokemon/?limit=20&offset=${stateOffset}`);
+
 
     // Llamo a la API
-    const fetchApi = async() =>{
+    const fetchApi = async () => {
         const response = await fetch(url);
-        console.log(response.status);
+        // console.log(response.status);
         const responseJSON = await response.json();
-        setTodos (responseJSON.results);
+        // Guardo la API dentro del estado 'todos' 
+        setTodos(responseJSON.results);
     }
 
-    // Definir efecto
-    useEffect(()=>{
-        fetchApi();
-    }, []);
+    // Llamo a la funcion fetchApi para ejecutarla, habia incluido un useEffect en un principio pero lo comente, el useEffect se ejecuta una sola vez cuando la aplicacion carga, pero como uso un state para cambiar la cantidad de pokemons que muestra se chocan, ya que el estado se reinicia cuando la aplicacion se recarga.
 
+    // useEffect(() => {
+    fetchApi();
+    // }, []);
     return (
-        <>        
-        <main>
-            <button onClick={()=> setStateCant(stateCant - 20)}>-20</button>
-            <button onClick={()=> setStateCant(stateCant + 20)}>+20</button>
-            <PokeList todos = {todos}/>
-        </main>
+        <>
+            <main>
+                {/* Funciones on click para sumar o restarle 20 al offset, y que cambie los que muestra*/}
+                <button onClick={() => { setStateOffset(stateOffset - 20); }}>Anterior</button>
+                <button onClick={() => { setStateOffset(stateOffset + 20); }}>Siguiente</button>
+                {/* Le paso la API('todos') y el stateOffset a la pokelist para usarlo dentro de componentes */}
+                <PokeList todos={todos} stateOffset={stateOffset} />
+            </main>
         </>
     )
 }
-
-export default App;
