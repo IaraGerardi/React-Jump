@@ -10,8 +10,8 @@ export function EjercicioUno() {
         <>
             <div class="cajaEjercicio">
                 <span className="barraLateral"></span>
-                <h1 id='primerTitulo' onClick={() => { setEjUno(!ejUno) }}>Ejercicio Uno</h1>
-                <span className="abrirCerrar">{ejUno ? '+' : '-'}</span>
+                <h1 id='primerTitulo'>Ejercicio Uno</h1>
+                <span className="abrirCerrar" onClick={() => { setEjUno(!ejUno) }}>{ejUno ? '+' : '-'}</span>
             </div>
             {ejUno ? <Botones /> : null}
         </>

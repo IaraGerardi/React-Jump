@@ -10,8 +10,8 @@ export function EjercicioDos() {
         <>
             <div class="cajaEjercicio">
                 <span className="barraLateral"></span>
-                <h1 id='primerTitulo' onClick={() => { setEjDos(!ejDos) }}>Ejercicio Dos</h1>
-                <span className="abrirCerrar">{ejDos ? '+' : '-'}</span>
+                <h1 id='primerTitulo'>Ejercicio Dos</h1>
+                <span className="abrirCerrar" onClick={() => { setEjDos(!ejDos) }}>{ejDos ? '+' : '-'}</span>
             </div>
             {ejDos ? <ComoTeLlamas /> : null}
         </>

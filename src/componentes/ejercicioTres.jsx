@@ -9,8 +9,8 @@ export function EjercicioTres() {
         <>
             <div class="cajaEjercicio">
                 <span className="barraLateral"></span>
-                <h1 id='primerTitulo' onClick={() => { setEjTres(!ejTres) }}>Ejercicio Tres</h1>
-                <span className="abrirCerrar">{ejTres ? '+' : '-'}</span>
+                <h1 id='primerTitulo'>Ejercicio Tres</h1>
+                <span className="abrirCerrar" onClick={() => { setEjTres(!ejTres) }}>{ejTres ? '+' : '-'}</span>
             </div>
             {ejTres ? <App /> : null}
         </>

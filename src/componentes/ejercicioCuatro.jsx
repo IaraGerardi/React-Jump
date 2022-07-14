@@ -9,8 +9,8 @@ export function EjercicioCuatro() {
         <>
             <div class="cajaEjercicio">
                 <span className="barraLateral"></span>
-                <h1 id='primerTitulo' onClick={() => { setEjCuatro(!ejCuatro) }}>Ejercicio Cuatro</h1>
-                <span className="abrirCerrar">{ejCuatro ? '+' : '-'}</span>
+                <h1 id='primerTitulo' >Ejercicio Cuatro</h1>
+                <span className="abrirCerrar" onClick={() => { setEjCuatro(!ejCuatro) }}>{ejCuatro ? '+' : '-'}</span>
             </div>
             {ejCuatro ? <SumaResta /> : null}
         </>
