@@ -12,16 +12,38 @@ code {
     monospace;
 }
 
-h1{
-  text-align: center;
-}
-
-button{
-  padding: 2px;
-  margin: 3px;
-}
-
-.SumaResta{
+/*Pantalla principal, titulo de los ejercicios*/
+.cajaEjercicio{
   display: flex;
+  height: 25vh;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(209, 33, 33, 0.432);
+}
+
+.barraLateral{
+  width: 3vw;
+  height: 100%;
+  background-color: rgba(255, 221, 209, 0.501);
+  z-index:2;
+}
+
+.abrirCerrar{
+  font-size: 40px;
+  margin: 30px;
+}
+
+/* <span className="barraLateral"></span>
+<h1 id='primerTitulo' onClick={() => { setEjTres(!ejTres) }}>Ejercicio Tres</h1>
+<span className="abrirCerrar">{ejTres ? '+' : '-'}</span> */
+
+/* Ejercicios */
+
+.ejercicio{
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   justify-content: center;
 }

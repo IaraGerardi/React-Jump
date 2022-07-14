@@ -4,18 +4,19 @@
     font-family: 'Lato', sans-serif;
 }
 
+/*Grid*/
 ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
 }
+/*Cards*/
 li{
     display: flex;
     flex-direction: column;
     margin: 5px;
     border-radius: 10px;
     background-color: rgb(158, 173, 173);
-    /* background-color: rgb(213, 141, 155); */
     list-style: none;
     justify-content: center;
     overflow: hidden;
@@ -27,6 +28,8 @@ li p{
     background-color: rgb(7, 64, 64);
     color: azure;
 }
+
+/*Media queries*/
 @media (max-width: 1200px) and (min-width: 901px){
     ul {
         display: grid;

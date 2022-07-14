@@ -10,7 +10,7 @@ export function SumaResta() {
         setStateSuma(stateSuma - 1);
     }
     return (
-        <header className='SumaResta'>
+        <header className='centrar ejercicio'>
             <button onClick={sumar}>Sumar</button>
             <h3>{stateSuma}</h3>
             <button onClick={restar}>Restar</button>
