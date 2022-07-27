@@ -1,0 +1,233 @@
+/*General*/
+#home, #main, #asideLeft, #asideRight, .estructuraTweet, .interacciones, .tweetSuperior, .twittear {
+    display: flex;
+}
+#main, #asideLeft, #asideRight, .estructuraTweet {
+    flex-direction: column;
+}
+#asideLeft, #asideRight {
+    width: 20%;
+}
+#main {
+    width: 60%;
+}
+.tweetSuperior {
+    align-content: center;
+    align-items: center;
+}
+#main, #asideLeft, #asideRight {
+    margin: 10px;
+}
+img {
+    object-fit: cover;
+}
+.seccion{
+    background-color: #DFDFDF;
+}
+input, textarea{
+    border: none;
+    outline: none;
+}
+.twittear, .trend, .tituloTrend, .estructuraTweet{
+background-color: #F6F6F6;
+}
+#main img, #asideRight img{
+    width: 80px;
+    height: 80px;
+}
+/*Menu de iconos*/
+.logoTwitter {
+    color: #00D2C6;
+}
+
+.itemAsideLeft{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+#asideLeft {
+    position: sticky;
+}
+.listaIconos li {
+    display: flex;
+    padding: 5px;
+}
+.iconoAsideLeft{
+    display: flex;
+    justify-items: flex-start;
+}
+.itemAsideLeft span{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+.iconoAsideLeft, .logoTwitter {
+    margin: 10px;
+}
+
+/*Main*/
+.cabeceraMain{
+    height: 50px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+/*Twittear*/
+.twittear form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.twittear{
+    padding: 5px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+.twittearInput{
+    display: flex;
+    height: 60px;
+    flex-grow: 1;
+}
+.botonTwittear {
+    width: 150px;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    align-self: end;
+    justify-content: center;
+    background-color: #00D2C6;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+.contenedorTweet{
+    max-width:min-content;
+    display: inline-block;
+}
+.tuitearInferior{
+    display: flex;
+    justify-content: space-between;
+}
+.iconosTuitear{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+/*Estructura del tweet*/
+.estructuraTweet{
+    padding-top: 15px;
+}
+.profilePicBox{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+.profilePicTweet {
+    border-radius: 40px;
+}
+.informacionPerfil{
+    display: flex;
+    margin-left: 5px;
+    align-items: center;
+}
+.username {
+    font-size: 25px;
+    font-weight: 500;
+}
+.arroba, .tiempoTweet {
+    font-size: 20px;
+    font-weight: 350;
+}
+.textoTweet{
+    display: flex;
+    flex-direction: column;
+}
+.username, .arroba, .tiempoTweet{
+    margin-right: 5px;
+}
+.interacciones {
+    justify-content: space-around;
+}
+.tweet{
+    width: 60%;
+    margin-left: 5px;
+}
+
+/*Trends*/
+.buscador{
+    display: flex;
+    background-color: white;
+}
+.tituloTrend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 1px;
+}
+.trend{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+}
+.trend{
+    padding: 6px;
+}
+ul, li, .trendInfo, .tweetsCount, .trendName, .trending{
+    padding: 0px;
+    margin: 0px;
+}
+.cajaTrendFoto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 0.5px black;
+    border-radius: 10px;
+}
+/* .trend p:not(.trendName, .trendInfo){ */
+.trending, .tweetsCount{
+    font-size:medium;
+    font-weight: 250;
+}
+.trendInfo{
+    font-size:large;
+    font-weight: 400;
+}
+.trendName{
+    margin-left: 3px;
+}
+.trendFoto{
+    border-radius: 10px;
+}
+
+/*Buscador*/
+.buscador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: solid 0.5px black;
+    margin: 5px;
+    /* background-color: rgb(34, 23, 132); */
+}
+.buscadorInput{
+    display: flex;
+    height: 30px;
+    flex-grow: 1;
+    border-radius: 15px;
+}
+.listaBuscador{
+    width: 285px;
+    height: 550px;
+    background-color: blue;
+    position: absolute;
+    top: 48px;
+    overflow: scroll;
+}
