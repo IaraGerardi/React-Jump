@@ -1,0 +1,107 @@
+/*Card producto*/
+
+.products, .cardProducto, .imagenProducto{
+    display: flex;
+}
+.products,.cardProducto{
+flex-direction: column;
+}
+.products{
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.productsList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.productsList, .textoCard p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding-inline-start: 0px;
+}
+.cardProducto {
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.cardProducto:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px 50px rgb(144, 141, 141); 
+}
+.imagenProducto {
+    width: 335px;
+    height: 415px;
+    object-fit: contain;
+}
+.textoCard {
+    margin: 3px;
+}
+.textoCard p {
+    padding: 3px;
+    border-radius: 5px;
+}
+.botonesCard{
+    display: flex;
+    flex-grow: 1;
+    background-color: chocolate;
+    z-index: 2;
+    justify-content: space-between;
+}
+.buttonDetalles, .buttonLoadMore{
+    width: 50%;
+    height: 30px;
+    border: 0.5px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.buttonLoadMore{
+    margin: 30px;
+}
+.buttonLoadMore:hover{
+    color: white;
+    background-color: black;
+}
+
+
+/*Product page*/
+
+.productPage{
+    margin: 10px;
+}
+.detallesProducto, .textoPage{
+    display: flex;
+    flex-grow: 1;
+}
+.imagenPage, .textoPage{
+    margin: 10px;
+}
+.imagenPage {
+    width: 485px;
+    height: 565px;
+    object-fit: contain;
+}
+.textoPage{
+    flex-direction: column;
+}
+.textoPage p:not(.descPage){
+    font-size: xx-large;
+}
+.descPage{
+   font-size: x-large;
+}
+
+/*Colores para distinguir (page)
+.productPage{
+    background-color: crimson;
+}
+.detallesProducto{
+    background-color: coral;
+}
+.textoPage{
+    background-color: cornflowerblue;
+}
+.textoPage p{
+    margin: 10px;
+    background-color: darkgoldenrod;
+}*/
