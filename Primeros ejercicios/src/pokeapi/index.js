@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import { useEffect } from "react";
 import { PokeList } from './componentes/pokelist';
 import './pokeapi.css';
@@ -20,11 +20,9 @@ export function App() {
         setTodos(responseJSON.results);
     }
 
-    // Llamo a la funcion fetchApi para ejecutarla, habia incluido un useEffect en un principio pero lo comente, el useEffect se ejecuta una sola vez cuando la aplicacion carga, pero como uso un state para cambiar la cantidad de pokemons que muestra se chocan, ya que el estado se reinicia cuando la aplicacion se recarga.
-
-    // useEffect(() => {
+    useEffect(() => {
     fetchApi();
-    // }, []);
+    }, [stateOffset]);
     return (
         <>
             <div>

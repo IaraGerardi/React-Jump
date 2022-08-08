@@ -1,0 +1,14 @@
+.landingPageProductos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+.landingPageProductos h3{
+    font-size: 45px;
+    margin: 0 0 20px 0;
+}
+.nuevosProductos{
+    display: flex;
+    overflow-x: scroll;
+}

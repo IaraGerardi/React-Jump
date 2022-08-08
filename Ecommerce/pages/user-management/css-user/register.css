@@ -1,0 +1,49 @@
+.contenedorFormulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenedorFormulario form {
+    width: 300px;
+    display: flex;
+    padding: 10px;
+    border: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.contenedorFormulario input {
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(200, 200, 200);
+}
+
+.contenedorFormulario .input {
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenedorFormulario .label {
+    margin: 5px;
+}
+
+.contenedorFormulario button {
+    border: 0.2px solid black;
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.contenedorFormulario .botones {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
