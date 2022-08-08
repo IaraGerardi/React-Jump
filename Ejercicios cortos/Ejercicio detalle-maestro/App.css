@@ -1,0 +1,62 @@
+.usersList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.userBox, .infoUsuario{
+    display: flex;
+}
+.userBox{
+    width: 300px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgb(248, 46, 86);
+    align-items: center;
+    overflow: hidden;
+}
+.infoUsuario, .userBox button, .iconify{
+    color:rgb(255, 255, 255);
+}
+.infoUsuario{
+    flex-grow: 1;
+    justify-content: center;
+}
+.userBox button{
+    border: none;
+    height: 60px;
+    align-items: center;
+    background-color: rgb(207, 19, 57);
+    cursor: pointer;
+}
+.botonUsuario{
+    padding: 5px;
+}
+.iconify{
+    transform: scale(3.38);
+}
+.inAct{
+    position: relative;
+    left: 20px;
+}
+.Act{
+    position: relative;
+    right: 10px;
+}
+.detalle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px;
+    background-color: rgb(248, 46, 86);
+}
+.detallesLista{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.itemDetalle, .itemDetalle p{
+    padding: 10px;
+}
