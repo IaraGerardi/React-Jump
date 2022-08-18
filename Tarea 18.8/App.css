@@ -1,0 +1,13 @@
+/* #cajaPrincipal, #form{
+    display: flex;
+}
+#form{
+    flex-direction: column;
+}
+#form .botones input{
+    margin: 5px;
+} */
+
+.datoTabla, .inputForm{
+    margin: 10px;
+}
